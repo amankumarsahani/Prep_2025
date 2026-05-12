@@ -12,14 +12,10 @@ class Solution(object):
         energy = 0
 
         for actual, minimum in tasks:
-
-            # If current energy is insufficient,
-            # add more initial energy
             if energy < minimum:
                 ans += (minimum - energy)
                 energy = minimum
 
-            # Finish the task
             energy -= actual
 
         return ans
